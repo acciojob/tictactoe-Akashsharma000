@@ -7,6 +7,26 @@
 </head>
 
 <body>
+
+	  <div class="container" role="main" aria-label="Tic Tac Toe game container">
+        <form id="player-form" aria-label="Player names form">
+            <div>
+                <label for="player-1">Player 1 Name (X):</label>
+                <input type="text" id="player-1" name="player-1" autocomplete="off" required aria-required="true" aria-describedby="player1-help" />
+            </div>
+            <div>
+                <label for="player-2">Player 2 Name (O):</label>
+                <input type="text" id="player-2" name="player-2" autocomplete="off" required aria-required="true" aria-describedby="player2-help" />
+            </div>
+            <button id="submit" type="submit" aria-label="Start Game">Start Game</button>
+        </form>
+        <section id="game-area" hidden aria-live="polite" aria-atomic="true" aria-relevant="text">
+            <h1>Tic Tac Toe</h1>
+            <div class="message" id="message" aria-live="polite"></div>
+            <div class="board" role="grid" aria-label="Tic Tac Toe board" aria-describedby="message">
+                <button type="button" class="cell" id="1" role="gridcell" aria-label="Cell 1"></button>
+                <button type="button" class="cell" id="2" role="gridcell" aria-label="Cell 2"></button>
+
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 </script>

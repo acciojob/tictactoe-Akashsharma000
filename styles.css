@@ -1,1 +1,137 @@
 /*  your css code here. If applicable */
+* {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #374151; /* neutral gray 700 */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+        }
+
+ .container {
+            max-width: 480px;
+            width: 100%;
+            background: #f9fafb; /* light bg */
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+ h1 {
+            font-weight: 700;
+            font-size: 2.75rem;
+            text-align: center;
+            margin: 0;
+            color: #111827; /* gray 900 */
+            user-select: none;
+        }
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+  form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        label {
+            font-weight: 600;
+            color: #4b5563; /* gray 600 */
+            margin-bottom: 4px;
+            font-size: 1rem;
+        }
+  input[type="text"] {
+            padding: 12px 16px;
+            border: 1.5px solid #d1d5db; /* gray 300 */
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            outline-offset: 2px;
+        }
+        input[type="text"]:focus {
+            border-color: #2563eb; /* blue-600*/
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+        }
+
+ button#submit {
+            background: #2563eb; /* blue-600 */
+            color: white;
+            padding: 14px 0;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.125rem;
+            cursor: pointer;
+            transition: background-color 0.25s ease;
+            user-select: none;
+        }
+        button#submit:hover:not(:disabled) {
+            background: #1d4ed8; /* blue-700 */
+        }
+
+  button#submit:disabled {
+            background: #93c5fd; /* blue-300 */
+            cursor: not-allowed;
+        }
+        /* Game message */
+        .message {
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: #2563eb;
+            min-height: 1.5em;
+            user-select: none;
+        }
+ .board {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        .cell {
+            user-select: none;
+            background: #ffffff;
+            border: 2px solid #e5e7eb; /* gray-200 */
+            border-radius: 16px;
+            height: 96px;
+            display: flex;
+
+
+		}
+
+.cell:hover:not(.disabled) {
+            background-color: #e0e7ff; /* indigo-100 */
+            border-color: #6366f1; /* indigo-500 */
+            color: #4f46e5;
+        }
+        .cell.disabled {
+            cursor: default;
+            color: #6b7280; /* gray 500 */
+            background-color: #f3f4f6; /* gray 100 */
+            border-color: #d1d5db; /* gray 300 */
+        }
+
+  @media (max-width: 480px) {
+            .container {
+                padding: 24px 20px 32px;
+            }
+            .cell {
+                height: 72px;
+                font-size: 2.25rem;
+            }
+            h1 {
+                font-size: 2.25rem;
+            }
+        }
